@@ -7,5 +7,8 @@ Thumbs.db
 .vscode/
 *.swp
 
+# Claude local settings
+.claude/settings.local.json
+
 # OS
 desktop.ini
