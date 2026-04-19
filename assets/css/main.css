@@ -114,9 +114,21 @@ a { color: inherit; }
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 18px;
+    gap: 16px;
     margin: 0 auto 12px;
     line-height: 1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .logo-mark {
@@ -131,17 +143,18 @@ a { color: inherit; }
     transform: rotate(-6deg) scale(1.06);
 }
 
-.wordmark {
+.wordmark-svg {
+    height: 64px;
+    width: auto;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.wordmark-svg .wm-text {
     font-family: 'Fredoka', 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 3rem;
-    letter-spacing: -0.015em;
-    line-height: 1;
-    background: linear-gradient(120deg, var(--brand-indigo) 0%, var(--brand-cyan) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+    font-size: 84px;
+    letter-spacing: -1.5px;
 }
 
 .tagline {
@@ -469,8 +482,8 @@ footer .brand-dots {
 
     .profile-header { padding: 40px 22px 32px; }
     .logo-lockup { gap: 12px; }
-    .logo-mark { width: 54px; height: 54px; }
-    .wordmark { font-size: 2.1rem; }
+    .logo-mark { width: 52px; height: 52px; }
+    .wordmark-svg { height: 44px; }
     .tagline { font-size: 0.9rem; }
     .typing-text { min-width: 0; width: 100%; font-size: 0.85rem; }
 

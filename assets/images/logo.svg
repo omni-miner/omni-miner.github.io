@@ -4,24 +4,27 @@
       <stop offset="0%" stop-color="#6366f1"/>
       <stop offset="100%" stop-color="#06b6d4"/>
     </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+    <radialGradient id="spark" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.95"/>
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
-    </linearGradient>
+    </radialGradient>
   </defs>
 
-  <!-- rounded square mark base -->
+  <!-- rounded square background -->
   <rect x="4" y="4" width="88" height="88" rx="22" fill="url(#bg)"/>
-  <rect x="4" y="4" width="88" height="44" rx="22" fill="url(#shine)"/>
 
-  <!-- gem cut symbol -->
-  <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
-    <!-- outline (crown + pavilion) -->
-    <path d="M 32 26 L 64 26 L 80 44 L 48 78 L 16 44 Z"/>
-    <!-- girdle line -->
-    <line x1="16" y1="44" x2="80" y2="44"/>
-    <!-- pavilion facets converging to culet -->
-    <line x1="32" y1="44" x2="48" y2="78"/>
-    <line x1="64" y1="44" x2="48" y2="78"/>
-  </g>
+  <!-- back peak (taller, semi-transparent) -->
+  <path d="M 26 76 L 56 26 L 86 76 Z" fill="#ffffff" opacity="0.45"/>
+
+  <!-- front peak (bolder, overlapping) -->
+  <path d="M 10 76 L 38 40 L 62 76 Z" fill="#ffffff"/>
+
+  <!-- ground line -->
+  <line x1="10" y1="76" x2="86" y2="76"
+        stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- data spark above the back peak -->
+  <circle cx="56" cy="18" r="9" fill="url(#spark)"/>
+  <circle cx="56" cy="18" r="3.5" fill="#ffffff"/>
 </svg>
