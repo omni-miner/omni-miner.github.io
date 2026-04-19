@@ -1,19 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 96" width="440" height="96" preserveAspectRatio="xMinYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 96" width="480" height="96">
+  <title>OmniMiner</title>
   <defs>
-    <linearGradient id="wm-grad" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="rune" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#6366f1"/>
       <stop offset="100%" stop-color="#06b6d4"/>
     </linearGradient>
-    <style type="text/css"><![CDATA[
-      @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap');
-      .wm {
-        font-family: 'Fredoka', 'Inter', 'Helvetica Neue', sans-serif;
-        font-weight: 600;
-        font-size: 84px;
-        letter-spacing: -1.5px;
-        fill: url(#wm-grad);
-      }
-    ]]></style>
   </defs>
-  <text x="0" y="74" class="wm">OmniMiner</text>
+
+  <g fill="none" stroke="url(#rune)" stroke-width="2.2"
+     stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- 1. Eye of Horus / All-seeing Eye -->
+    <g transform="translate(40 48)">
+      <circle r="26"/>
+      <path d="M -20 0 Q 0 -13 20 0 Q 0 13 -20 0 Z"/>
+      <circle r="5" fill="url(#rune)" stroke="none"/>
+      <line x1="0" y1="-30" x2="0" y2="-26"/>
+      <line x1="0" y1="26" x2="0" y2="30"/>
+      <line x1="-30" y1="0" x2="-26" y2="0"/>
+      <line x1="26" y1="0" x2="30" y2="0"/>
+    </g>
+
+    <!-- 2. Hexagram in dashed circle -->
+    <g transform="translate(116 48)">
+      <circle r="28" stroke-dasharray="3 4" opacity="0.55"/>
+      <polygon points="0,-22 19,11 -19,11"/>
+      <polygon points="0,22 19,-11 -19,-11"/>
+      <circle r="3" fill="url(#rune)" stroke="none"/>
+    </g>
+
+    <!-- 3. Triskelion (three swirling arms) -->
+    <g transform="translate(192 48)">
+      <circle r="26" opacity="0.4"/>
+      <path d="M 0 0 Q 6 -10 0 -18 Q -10 -18 -10 -8"/>
+      <g transform="rotate(120)">
+        <path d="M 0 0 Q 6 -10 0 -18 Q -10 -18 -10 -8"/>
+      </g>
+      <g transform="rotate(240)">
+        <path d="M 0 0 Q 6 -10 0 -18 Q -10 -18 -10 -8"/>
+      </g>
+      <circle r="3" fill="url(#rune)" stroke="none"/>
+    </g>
+
+    <!-- 4. Zia sun (mining-source rays) -->
+    <g transform="translate(268 48)">
+      <circle r="8"/>
+      <line x1="-3" y1="-14" x2="-3" y2="-22"/>
+      <line x1="0"  y1="-14" x2="0"  y2="-24"/>
+      <line x1="3"  y1="-14" x2="3"  y2="-22"/>
+      <line x1="14" y1="-3"  x2="22" y2="-3"/>
+      <line x1="14" y1="0"   x2="24" y2="0"/>
+      <line x1="14" y1="3"   x2="22" y2="3"/>
+      <line x1="-3" y1="14"  x2="-3" y2="22"/>
+      <line x1="0"  y1="14"  x2="0"  y2="24"/>
+      <line x1="3"  y1="14"  x2="3"  y2="22"/>
+      <line x1="-14" y1="-3" x2="-22" y2="-3"/>
+      <line x1="-14" y1="0"  x2="-24" y2="0"/>
+      <line x1="-14" y1="3"  x2="-22" y2="3"/>
+    </g>
+
+    <!-- 5. Crescent + three accent dots -->
+    <g transform="translate(344 48)">
+      <path d="M 8 -22 A 24 24 0 1 0 8 22 A 17 17 0 1 1 8 -22 Z"
+            fill="url(#rune)" stroke="none"/>
+      <circle cx="-18" cy="-18" r="2.6" fill="url(#rune)" stroke="none"/>
+      <circle cx="-26" cy="0"   r="2"   fill="url(#rune)" stroke="none"/>
+      <circle cx="-18" cy="18"  r="2.6" fill="url(#rune)" stroke="none"/>
+    </g>
+
+    <!-- 6. Eight-point compass star in circle -->
+    <g transform="translate(420 48)">
+      <circle r="26"/>
+      <polygon points="0,-22 5,-5 22,0 5,5 0,22 -5,5 -22,0 -5,-5"/>
+      <circle r="3" fill="url(#rune)" stroke="none"/>
+    </g>
+
+  </g>
 </svg>
