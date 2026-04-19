@@ -14,20 +14,32 @@
   <!-- rounded square background -->
   <rect x="4" y="4" width="88" height="88" rx="22" fill="url(#bg)"/>
 
-  <!-- orbits (3 ellipses at 0°, 60°, 120°) -->
-  <g fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"
-     transform="translate(48 48)">
-    <ellipse rx="34" ry="13" opacity="0.95"/>
-    <ellipse rx="34" ry="13" transform="rotate(60)" opacity="0.85"/>
-    <ellipse rx="34" ry="13" transform="rotate(120)" opacity="0.75"/>
+  <!-- subtle hex ring connecting outer nodes -->
+  <polygon points="48,20 72,34 72,62 48,76 24,62 24,34"
+           fill="none" stroke="#ffffff" stroke-width="1.5"
+           stroke-linejoin="round" opacity="0.35"/>
+
+  <!-- spokes from center to each node -->
+  <g stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" opacity="0.9">
+    <line x1="48" y1="48" x2="48" y2="20"/>
+    <line x1="48" y1="48" x2="72" y2="34"/>
+    <line x1="48" y1="48" x2="72" y2="62"/>
+    <line x1="48" y1="48" x2="48" y2="76"/>
+    <line x1="48" y1="48" x2="24" y2="62"/>
+    <line x1="48" y1="48" x2="24" y2="34"/>
   </g>
 
-  <!-- particles on orbits -->
-  <circle cx="82" cy="48" r="3.2" fill="#ffffff"/>
-  <circle cx="31" cy="18.6" r="2.6" fill="#ffffff" opacity="0.9"/>
-  <circle cx="31" cy="77.4" r="2.6" fill="#ffffff" opacity="0.85"/>
+  <!-- outer nodes -->
+  <g fill="#ffffff">
+    <circle cx="48" cy="20" r="4.5"/>
+    <circle cx="72" cy="34" r="4.5"/>
+    <circle cx="72" cy="62" r="4.5"/>
+    <circle cx="48" cy="76" r="4.5"/>
+    <circle cx="24" cy="62" r="4.5"/>
+    <circle cx="24" cy="34" r="4.5"/>
+  </g>
 
-  <!-- central core with halo -->
-  <circle cx="48" cy="48" r="11" fill="url(#core)"/>
-  <circle cx="48" cy="48" r="5" fill="#ffffff"/>
+  <!-- central hub -->
+  <circle cx="48" cy="48" r="12" fill="url(#core)"/>
+  <circle cx="48" cy="48" r="6.5" fill="#ffffff"/>
 </svg>
