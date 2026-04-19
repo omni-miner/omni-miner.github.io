@@ -1,14 +1,106 @@
+# ============================================================
+# OS
+# ============================================================
 .DS_Store
+._*
 Thumbs.db
-*.log
+desktop.ini
+.Spotlight-V100
+.Trashes
 
-# IDE
+# ============================================================
+# Editors / IDEs
+# ============================================================
 .idea/
 .vscode/
 *.swp
+*.swo
+*~
+.history/
+*.code-workspace
 
-# Claude local settings
+# ============================================================
+# Logs / temp
+# ============================================================
+*.log
+logs/
+tmp/
+*.tmp
+.cache/
+
+# ============================================================
+# Secrets / env
+# ============================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+
+# ============================================================
+# AI assistants — local config / state / artifacts
+# ============================================================
+# Claude Code
 .claude/settings.local.json
+.claude/.credentials.json
+.claude/state/
+.claude/projects/
+CLAUDE.local.md
 
-# OS
-desktop.ini
+# Cursor
+.cursor/
+.cursorrules.local
+
+# Aider
+.aider*
+.aider.chat.history.md
+
+# Continue.dev
+.continue/
+
+# OpenAI Codex / Copilot 등 기타 AI 툴 로컬 캐시
+.codex/
+.copilot/
+.windsurf/
+.zed/
+GEMINI.local.md
+COPILOT.local.md
+
+# ============================================================
+# Worklog (작업 노트 — 로컬 전용)
+# ============================================================
+__worklog__/
+
+# ============================================================
+# Build outputs (Jekyll 등 도입 시 대비)
+# ============================================================
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+dist/
+build/
+
+# ============================================================
+# Dependency directories (도입 시 대비)
+# ============================================================
+node_modules/
+bower_components/
+vendor/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+
+# ============================================================
+# Misc
+# ============================================================
+*.bak
+*.orig
+*.rej
