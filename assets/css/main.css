@@ -100,9 +100,9 @@ a { color: inherit; }
 }
 
 .brand-dots .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    transform: rotate(45deg);
 }
 
 .brand-dots .dot.indigo { background: var(--brand-indigo); }
