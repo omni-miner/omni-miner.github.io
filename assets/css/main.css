@@ -110,31 +110,38 @@ a { color: inherit; }
 .brand-dots .dot.amber  { background: var(--brand-amber); }
 .brand-dots .dot.pink   { background: var(--brand-pink); }
 
-.logo-wrap {
-    display: flex;
+.logo-lockup {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 18px;
+    gap: 18px;
+    margin: 0 auto 12px;
+    line-height: 1;
 }
 
-.logo {
-    width: 96px;
-    height: 96px;
-    transition: transform 0.4s ease;
+.logo-mark {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 6px 14px rgba(99, 102, 241, 0.28));
+    transition: transform 0.4s cubic-bezier(.2,.8,.2,1);
 }
 
-.logo:hover {
-    transform: rotate(-8deg) scale(1.05);
+.logo-mark:hover {
+    transform: rotate(-6deg) scale(1.06);
 }
 
-.name {
-    font-size: 2.75rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-    background: linear-gradient(120deg, var(--brand-indigo), var(--brand-cyan));
+.wordmark {
+    font-family: 'Fredoka', 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    background: linear-gradient(120deg, var(--brand-indigo) 0%, var(--brand-cyan) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    color: transparent;
 }
 
 .tagline {
@@ -270,7 +277,7 @@ a { color: inherit; }
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
 }
 
@@ -453,13 +460,18 @@ footer .brand-dots {
    Responsive
    ========================================================================== */
 
+@media (max-width: 900px) {
+    .service-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 700px) {
     .container { padding: 28px 16px; }
 
     .profile-header { padding: 40px 22px 32px; }
-    .name { font-size: 2rem; }
-    .logo { width: 76px; height: 76px; }
-    .tagline { font-size: 0.92rem; }
+    .logo-lockup { gap: 12px; }
+    .logo-mark { width: 54px; height: 54px; }
+    .wordmark { font-size: 2.1rem; }
+    .tagline { font-size: 0.9rem; }
     .typing-text { min-width: 0; width: 100%; font-size: 0.85rem; }
 
     .section { padding: 22px; }

@@ -7,7 +7,7 @@
     <meta name="description" content="omniminer는 데이터 마이닝, 데이터 사이언스, 데이터 수집 분야의 개발 및 기술 지원을 제공하는 랩스입니다.">
     <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
@@ -19,11 +19,11 @@
                 <span class="dot amber"></span>
                 <span class="dot pink"></span>
             </div>
-            <div class="logo-wrap">
-                <img src="assets/images/logo.svg" alt="omniminer logo" class="logo">
-            </div>
-            <h1 class="name">omniminer</h1>
-            <p class="tagline">Data Mining &middot; Data Science &middot; Data Engineering Labs</p>
+            <h1 class="logo-lockup">
+                <img src="assets/images/logo.svg" alt="" class="logo-mark">
+                <span class="wordmark">OmniMiner</span>
+            </h1>
+            <p class="tagline">Data Mining &middot; Data Science &middot; Crawling &middot; Information Retrieval Labs</p>
             <div class="typing-text">
                 <span class="prompt">&gt;</span> <span id="typed-text"></span><span class="cursor">_</span>
             </div>
@@ -40,9 +40,9 @@
         <section class="section">
             <h2 class="section-title"><i class="fas fa-flask"></i> About</h2>
             <p class="about-text">
-                <strong>omniminer</strong>는 데이터에서 가치를 채굴(mining)하는 랩스입니다.
-                흩어진 원시 데이터를 수집·정제하고, 통계적·기계학습적 방법으로 패턴을 분석하여
-                의사결정에 활용 가능한 인사이트와 시스템으로 전달합니다.
+                <strong>OmniMiner</strong>는 데이터에서 가치를 채굴(mining)하는 랩스입니다.
+                웹 전반의 데이터를 <strong>크롤링·축적</strong>하고, 통계적·기계학습적 방법으로
+                패턴을 분석하며, 정보검색(IR) 시스템으로 빠르게 닿을 수 있도록 만듭니다.
             </p>
             <p class="about-text" style="margin-top: 12px;">
                 연구 수준의 깊이와 엔지니어링 수준의 안정성을 동시에 추구하며,
@@ -71,17 +71,33 @@
                 </div>
                 <div class="service-card">
                     <div class="service-icon amber"><i class="fas fa-spider"></i></div>
-                    <h3 class="service-name">Data Collection</h3>
+                    <h3 class="service-name">Web Crawling</h3>
                     <p class="service-desc">
-                        웹 크롤링, 스크래핑, API 연동, 스트리밍 수집까지 — 안정적이고 확장 가능한
-                        데이터 파이프라인을 구축합니다.
+                        대규모 웹 크롤러 개발 및 운영. 스크래핑, 동적 렌더링, 분산 수집,
+                        차단 우회 전략까지 — 정보검색을 위한 고품질 크롤링 파이프라인을 구축합니다.
                     </p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon pink"><i class="fas fa-headset"></i></div>
+                    <div class="service-icon pink"><i class="fas fa-magnifying-glass"></i></div>
+                    <h3 class="service-name">Information Retrieval</h3>
+                    <p class="service-desc">
+                        검색 엔진 설계, 색인(Indexing), 랭킹, 시맨틱 검색, 벡터 검색까지 —
+                        정보검색(IR) 시스템을 처음부터 구축하고 튜닝합니다.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon indigo"><i class="fas fa-warehouse"></i></div>
+                    <h3 class="service-name">Data Archiving</h3>
+                    <p class="service-desc">
+                        장기 데이터 축적과 아카이빙, 데이터 레이크/웨어하우스 설계,
+                        라이프사이클 관리로 신뢰할 수 있는 데이터 자산을 만듭니다.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon cyan"><i class="fas fa-headset"></i></div>
                     <h3 class="service-name">Tech Support</h3>
                     <p class="service-desc">
-                        데이터 인프라 구축, 운영, 트러블슈팅, 성능 튜닝, 컨설팅까지
+                        크롤링 운영 지원, 인프라 구축, 트러블슈팅, 성능 튜닝, 컨설팅까지
                         장기적인 기술 파트너로 동반합니다.
                     </p>
                 </div>
@@ -101,7 +117,14 @@
                 <span class="skill-badge">Spark</span>
                 <span class="skill-badge">Airflow</span>
                 <span class="skill-badge">Kafka</span>
+                <span class="skill-badge">Scrapy</span>
+                <span class="skill-badge">Playwright</span>
+                <span class="skill-badge">Selenium</span>
+                <span class="skill-badge">BeautifulSoup</span>
                 <span class="skill-badge">Elasticsearch</span>
+                <span class="skill-badge">OpenSearch</span>
+                <span class="skill-badge">Solr</span>
+                <span class="skill-badge">Lucene</span>
                 <span class="skill-badge">PostgreSQL</span>
                 <span class="skill-badge">ClickHouse</span>
                 <span class="skill-badge">Docker</span>
@@ -122,6 +145,20 @@
                     <div>
                         <strong>Data Pipeline</strong>
                         <p>배치/스트리밍 ETL 파이프라인 설계 및 구축</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-spider"></i>
+                    <div>
+                        <strong>Crawling & IR</strong>
+                        <p>대규모 분산 크롤러 구축, 색인·랭킹·시맨틱 검색 등 정보검색 시스템 개발</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-warehouse"></i>
+                    <div>
+                        <strong>Data Archiving</strong>
+                        <p>장기 데이터 축적 및 데이터 레이크/웨어하우스 아키텍처</p>
                     </div>
                 </li>
                 <li>
